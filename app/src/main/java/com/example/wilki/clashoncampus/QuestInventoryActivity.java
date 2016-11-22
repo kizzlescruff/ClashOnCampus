@@ -1,9 +1,11 @@
 package com.example.wilki.clashoncampus;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -13,6 +15,7 @@ public class QuestInventoryActivity extends AppCompatActivity {
     private int windowHeight;
     private RelativeLayout.LayoutParams layoutParams;
     private ImageView swordView;
+    private Button closeInvBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +25,17 @@ public class QuestInventoryActivity extends AppCompatActivity {
         swordView = (ImageView) findViewById(R.id.swordImage);
         windowWidth = getWindowManager().getDefaultDisplay().getWidth();
         windowHeight = getWindowManager().getDefaultDisplay().getHeight();
-
         swordView.setOnTouchListener(new InvImageListener());
+        closeInvBtn = (Button) findViewById(R.id.backMainMenuBtn);
+    }
+
+    public void closeInventory(View view){
+        closeInvBtn.setBackgroundResource(R.drawable.clicked_button);
+        startActivity(new Intent(this, QuestMapActivity.class));
+    }
+
+    public void onRestart(){
+        closeInvBtn.setBackgroundResource(R.drawable.button);
     }
 
     private class InvImageListener implements View.OnTouchListener {
