@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="80sp"
         android:textSize="16sp"
-        android:id="@+id/playQuestBtn"
+        android:id="@+id/publishQuestBtn"
         android:background="@drawable/button"
         android:onClick="playQuest"
         android:layout_above="@+id/backToQuestListBtn"

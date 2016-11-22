@@ -89,8 +89,8 @@
         android:layout_marginTop="18dp"
         android:id="@+id/monster1"
         android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/playQuestBtn"
-        android:layout_alignStart="@+id/playQuestBtn" />
+        android:layout_alignLeft="@+id/publishQuestBtn"
+        android:layout_alignStart="@+id/publishQuestBtn" />
 
     <ImageView
         android:layout_width="80sp"
@@ -110,7 +110,7 @@
         android:id="@+id/seekBar"
         android:max="100"
         android:progress="20"
-        android:layout_above="@+id/playQuestBtn"
+        android:layout_above="@+id/publishQuestBtn"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -141,7 +141,7 @@
         android:layout_height="80sp"
         android:textSize="18sp"
         android:layout_marginLeft="80dp"
-        android:id="@+id/playQuestBtn"
+        android:id="@+id/publishQuestBtn"
         android:background="@drawable/button"
         android:onClick="setMonster"
         android:layout_above="@+id/backToQuestListBtn"

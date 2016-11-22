@@ -28,41 +28,33 @@
         android:layout_height="80sp"
         android:textSize="18sp"
         android:layout_marginLeft="80dp"
-        android:id="@+id/playQuestBtn"
+        android:id="@+id/publishQuestBtn"
         android:background="@drawable/button"
         android:onClick="publishQuest"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="150dp"
-        app:srcCompat="@drawable/border"
-        android:id="@+id/imageView"
-        android:layout_below="@+id/questCompTxt"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:layout_alignTop="@+id/imageView"
+        android:layout_marginTop="80dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
+        android:padding="8dp"
+        android:hint="Enter completion message"
+        android:background="@drawable/border"
         android:id="@+id/editText" />
 
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        app:srcCompat="@drawable/border"
-        android:id="@+id/imageView7"
-        android:layout_alignTop="@+id/imageViewPI2"
-        android:layout_centerHorizontal="true" />
+        app:srcCompat="@drawable/sheild_border"
+        android:id="@+id/sheildPrize"
+        android:layout_alignTop="@+id/swordPrize"
+        android:layout_centerHorizontal="true"
+        android:onClick="sheildSelected"/>
 
 
     <ImageView
@@ -70,19 +62,10 @@
         android:layout_height="80dp"
         app:srcCompat="@drawable/border"
         android:id="@+id/imageView8"
-        android:layout_below="@+id/imageView7"
-        android:layout_alignLeft="@+id/imageView7"
-        android:layout_alignStart="@+id/imageView7"
+        android:layout_below="@+id/sheildPrize"
+        android:layout_alignLeft="@+id/sheildPrize"
+        android:layout_alignStart="@+id/sheildPrize"
         android:layout_marginTop="11dp" />
-
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:srcCompat="@drawable/border"
-        android:id="@+id/imageViewPI2"
-        android:layout_alignTop="@+id/imageViewPI3"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
 
     <TextView
         android:text="SELECT PRIZE ITEM"
@@ -91,9 +74,26 @@
         android:layout_height="wrap_content"
         android:id="@+id/selectPrizeTxt"
         android:layout_marginTop="14dp"
-        android:layout_below="@+id/imageView"
+        android:layout_below="@+id/editText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/border"
+        android:id="@+id/imageView6"
+        android:layout_alignTop="@+id/imageView8"
+        android:layout_alignLeft="@+id/swordPrize"
+        android:layout_alignStart="@+id/swordPrize" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/border"
+        android:id="@+id/imageViewPI1"
+        android:layout_alignTop="@+id/imageView8"
+        android:layout_alignParentRight="true"/>
 
     <ImageView
         android:layout_width="80dp"
@@ -102,24 +102,24 @@
         android:layout_marginTop="13dp"
         android:id="@+id/imageViewPI3"
         android:layout_below="@+id/selectPrizeTxt"
-        android:layout_toRightOf="@+id/editText"
-        android:layout_toEndOf="@+id/editText" />
+        android:layout_alignParentRight="true"/>
 
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:srcCompat="@drawable/border"
-        android:id="@+id/imageViewPI1"
-        android:layout_alignTop="@+id/imageView6"
-        android:layout_alignLeft="@+id/imageViewPI3"
-        android:layout_alignStart="@+id/imageViewPI3" />
+        android:id="@+id/imageView13"
+        android:layout_alignTop="@+id/imageViewPI3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        app:srcCompat="@drawable/border"
-        android:id="@+id/imageView6"
-        android:layout_alignTop="@+id/imageView8"
-        android:layout_alignLeft="@+id/imageViewPI2"
-        android:layout_alignStart="@+id/imageViewPI2" />
+        app:srcCompat="@drawable/sword_border5"
+        android:id="@+id/swordPrize"
+        android:layout_alignTop="@+id/imageViewPI3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="swordSelected"/>
 </RelativeLayout>

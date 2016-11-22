@@ -16,7 +16,7 @@ public class QuestDescriptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quest_description);
-        playQstBtn = (Button) findViewById(R.id.playQuestBtn);
+        playQstBtn = (Button) findViewById(R.id.publishQuestBtn);
         rtnToQLBtn = (Button) findViewById(R.id.backToQuestListBtn);
         qHolder = (QuestHolder) getIntent().getSerializableExtra("QUESTS");
     }

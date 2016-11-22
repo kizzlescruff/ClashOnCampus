@@ -50,7 +50,7 @@
         android:layout_height="80sp"
         android:textSize="18sp"
         android:layout_marginLeft="80dp"
-        android:id="@+id/playQuestBtn"
+        android:id="@+id/publishQuestBtn"
         android:background="@drawable/button"
         android:onClick="createQuest"
         android:layout_above="@+id/backToQuestListBtn"
