@@ -28,7 +28,7 @@
         android:layout_height="80sp"
         android:textSize="18sp"
         android:layout_marginLeft="80dp"
-        android:id="@+id/publishQuestBtn"
+        android:id="@+id/startCreatingQuestBtn"
         android:background="@drawable/button"
         android:onClick="publishQuest"
         android:layout_alignParentBottom="true"

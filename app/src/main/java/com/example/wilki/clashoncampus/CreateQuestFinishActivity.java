@@ -24,7 +24,7 @@ public class CreateQuestFinishActivity extends AppCompatActivity {
 
         prizeSword = (ImageView) findViewById(R.id.swordPrize);
         prizeSheild = (ImageView) findViewById(R.id.sheildPrize);
-        publishQuest = (Button) findViewById(R.id.publishQuestBtn);
+        publishQuest = (Button) findViewById(R.id.startCreatingQuestBtn);
         completionMsg = (EditText) findViewById(R.id.editText);
         selected = false;
     }

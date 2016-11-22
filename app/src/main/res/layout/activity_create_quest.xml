@@ -38,7 +38,7 @@
         android:layout_height="80sp"
         android:textSize="18sp"
         android:layout_marginLeft="80dp"
-        android:id="@+id/backToQuestListBtn"
+        android:id="@+id/backToMainMenuBtn"
         android:background="@drawable/button"
         android:onClick="returnToMainMenu"
         android:layout_alignParentBottom="true"
@@ -50,10 +50,10 @@
         android:layout_height="80sp"
         android:textSize="18sp"
         android:layout_marginLeft="80dp"
-        android:id="@+id/publishQuestBtn"
+        android:id="@+id/startCreatingQuestBtn"
         android:background="@drawable/button"
         android:onClick="createQuest"
-        android:layout_above="@+id/backToQuestListBtn"
+        android:layout_above="@+id/backToMainMenuBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="13dp" />
 
