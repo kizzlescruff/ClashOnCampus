@@ -89,6 +89,70 @@ public class CreateQuestMapActivity extends FragmentActivity implements Location
 
         main_menu = (Button) findViewById(R.id.main_menu);
 
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                settings_menu.setVisibility(View.VISIBLE);
+                settings.setVisibility(View.INVISIBLE);
+                settings.setEnabled(false);
+
+                close.setVisibility(View.VISIBLE);
+                close.setEnabled(true);
+
+                finish.setEnabled(false);
+                add_marker.setEnabled(false);
+            }
+        });
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                settings_menu.setVisibility(View.INVISIBLE);
+                settings.setVisibility(View.VISIBLE);
+                settings.setEnabled(true);
+
+                close.setVisibility(View.INVISIBLE);
+                close.setEnabled(false);
+
+                add_marker.setEnabled(true);
+                finish.setEnabled(true);
+            }
+        });
+        finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finishActivity(view);
+            }
+        });
+
+        add_marker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // HAYDEN_WILL_ADD_SOMETHING_HERE
+            }
+        });
+
+        main_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                new AlertDialog.Builder(view.getContext())
+                        .setTitle("Are you sure you want to return to the Main Menu?")
+                        .setMessage("All progress in the quest will be lost.")
+                        .setPositiveButton("Return to Main Menu", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                returnMainMenu(view);
+                            }
+                        })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+            }
+        });
+
     }
 
 
@@ -170,70 +234,6 @@ public class CreateQuestMapActivity extends FragmentActivity implements Location
         mMap.setOnMapClickListener(this);
         //monsterAppear(location);
 
-
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                settings_menu.setVisibility(View.VISIBLE);
-                settings.setVisibility(View.INVISIBLE);
-                settings.setEnabled(false);
-
-                close.setVisibility(View.VISIBLE);
-                close.setEnabled(true);
-
-                finish.setEnabled(false);
-                add_marker.setEnabled(false);
-            }
-        });
-
-        close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                settings_menu.setVisibility(View.INVISIBLE);
-                settings.setVisibility(View.VISIBLE);
-                settings.setEnabled(true);
-
-                close.setVisibility(View.INVISIBLE);
-                close.setEnabled(false);
-
-                add_marker.setEnabled(true);
-                finish.setEnabled(true);
-            }
-        });
-        finish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finishActivity(view);
-            }
-        });
-
-        add_marker.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // HAYDEN_WILL_ADD_SOMETHING_HERE
-            }
-        });
-
-        main_menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View view) {
-                new AlertDialog.Builder(view.getContext())
-                        .setTitle("Are you sure you want to return to the Main Menu?")
-                        .setMessage("All progress in the quest will be lost.")
-                        .setPositiveButton("Return to Main Menu", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                returnMainMenu(view);
-                            }
-                        })
-                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // do nothing
-                            }
-                        })
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .show();
-            }
-        });
     }
 
     @Override
