@@ -27,7 +27,7 @@
         android:layout_width="fill_parent"
         android:layout_height="80sp"
         android:layout_marginLeft="80dp"
-        android:id="@+id/createQuestBtn"
+        android:id="@+id/button2"
         android:textSize="25sp"
         android:background="@drawable/button"
         android:layout_below="@+id/startQuestBtn"

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wilki.clashoncampus">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,7 +19,6 @@
         </activity>
         <activity android:name=".QuestListActivity" />
         <activity android:name=".QuestDescriptionActivity" />
-        <activity android:name=".QuestMapActivity" />
         <activity android:name=".QuestInventoryActivity" />
         <activity android:name=".QuestFightActivity" />
         <activity android:name=".QuestCompleteActivity" />
@@ -25,6 +26,18 @@
         <activity android:name=".CreateQuestMapActivity" />
         <activity android:name=".CreateQuestSetMonsterActivity" />
         <activity android:name=".CreateQuestFinishActivity"></activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".QuestMapActivity"
+            android:label="@string/title_activity_maps">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
