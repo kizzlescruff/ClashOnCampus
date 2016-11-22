@@ -8,4 +8,9 @@
     <string name="start_creating_n_quest">START CREATING\n QUEST</string>
     <string name="main_menu">MAIN MENU</string>
     <string name="winning_message">You were brave and defeated the monster. We shall write songs about your bravery. Have our most treasured sword in payment.</string>
+    <string-array name="sort_modes">
+        <item>Name</item>
+        <item>Distance</item>
+        <item>Rating</item>
+    </string-array>
 </resources>
