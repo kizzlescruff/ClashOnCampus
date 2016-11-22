@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ClashOnCampus</string>
+    <string name="create_quest">CREATE QUEST</string>
+    <string name="start_quest">START QUEST</string>
+    <string name="quest_desc">We know enemt scouts have managed to infiltrate our camp, they have stolen essential information which could compromise everything we\'ve worked for. I need you to infiltrate their camp and get rid of the scouts, they might know too much. We\'ll show those worthless elves.</string>
+    <string name="enter_quest_name">Enter quest name</string>
+    <string name="enter_quest_description">Enter quest description</string>
+    <string name="start_creating_n_quest">START CREATING\n QUEST</string>
+    <string name="main_menu">MAIN MENU</string>
+    <string name="winning_message">You were brave and defeated the monster. We shall write songs about your bravery. Have our most treasured sword in payment.</string>
 </resources>

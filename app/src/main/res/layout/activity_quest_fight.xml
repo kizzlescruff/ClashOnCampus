@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_quest_fight"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/bg"
+    tools:context="com.example.wilki.clashoncampus.QuestFightActivity">
+
+    <View
+        android:id="@+id/centerShim"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+
+    <Button
+        android:text="Attack 1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_above="@+id/defendBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/centerShim"
+        android:background="@drawable/button"
+        android:onClick="triggerAttack1"
+        android:id="@+id/attack1Btn" />
+
+    <Button
+        android:text="Magic 1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/attack2Btn"
+        android:layout_toRightOf="@+id/centerShim"
+        android:background="@drawable/button"
+        android:onClick="triggerMagic1"
+        android:id="@+id/magic1Btn" />
+
+    <Button
+        android:text="Attack 2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_above="@+id/attack3Btn"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/centerShim"
+        android:background="@drawable/button"
+        android:onClick="triggerAttack2"
+        android:id="@+id/attack2Btn" />
+
+    <Button
+        android:text="Defend"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_above="@+id/runBtn"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/centerShim"
+        android:background="@drawable/button"
+        android:onClick="triggerDefend"
+        android:id="@+id/defendBtn" />
+
+    <Button
+        android:text="Attack 3"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/centerShim"
+        android:background="@drawable/button"
+        android:onClick="triggerAttack3"
+        android:id="@+id/attack3Btn" />
+
+    <Button
+        android:text="Run"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/centerShim"
+        android:background="@drawable/button"
+        android:onClick="triggerRun"
+        android:id="@+id/runBtn" />
+
+    <TextView
+        android:text="User HP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView9" />
+
+    <TextView
+        android:text="Monster HP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/textView10" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/player_health"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageView9" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/monster_health"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/imageView10" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:progress="100"
+        android:id="@+id/userHP"
+        android:progressDrawable="@drawable/greenprogress"
+        android:layout_below="@+id/textView9"
+        android:layout_toRightOf="@+id/imageView9"
+        android:layout_toEndOf="@+id/imageView9"
+        android:layout_marginTop="16dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:progress="100"
+        android:id="@+id/monsterHP"
+        android:progressDrawable="@drawable/greenprogress"
+        android:layout_alignTop="@+id/userHP"
+        android:layout_toLeftOf="@+id/imageView10"
+        android:layout_toStartOf="@+id/imageView10" />
+
+</RelativeLayout>
