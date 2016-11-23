@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="50dp"
-    android:paddingRight="50dp"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
     android:background="@color/bg"
     tools:context="com.example.wilki.clashoncampus.QuestInventoryActivity">
 
@@ -27,35 +27,39 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/inv_grid"
-        android:id="@+id/inv_grid"
-        android:layout_marginBottom="159dp"
-        android:layout_above="@+id/backMainMenuBtn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        app:srcCompat="@drawable/inv_equip_grid"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/textView8"
+        android:layout_above="@+id/backMainMenuBtn" />
 
     <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/sword"
+        android:id="@+id/swordImage"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:text="INVENTORY"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/equip_grid"
-        android:id="@+id/equip_grid"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="200dp"
+        android:id="@+id/textView8"
         android:layout_alignParentTop="true"
-        android:layout_below="@+id/inv_grid"
-        />
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp"/>
 
-
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:srcCompat="@drawable/sword"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:id="@+id/swordImage"
-
-        />
+    <TextView
+        android:text="EQUIPED"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView14"
+        android:layout_marginBottom="170dp"
+        android:layout_above="@+id/backMainMenuBtn"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8" />
 
 
 </RelativeLayout>
